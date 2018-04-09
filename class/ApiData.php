@@ -44,6 +44,18 @@ class ApiData
                 case 'list alcoholic filters':
                     $url = 'list.php?a=list';
                     break;
+                case 'finder':
+                    $url = 'list.php?i=list';
+                    break;
+                case 'drinkInfo':
+                    $url ='lookup.php?i=' . $data;
+                    break;
+                case 'cocktails':
+                    $url = 'filter.php?i='. $data;
+                    break;
+                case 'drinks':
+                    $url = 'filter.php?i='. $data;
+                    break;
                 default:
             }
 

@@ -14,14 +14,13 @@ $app = new Application();
 
 };*/
 
-
-
 if(isset($_POST['data'])){
     $data = $_POST['data'];
 } else {
     $data ='';
 }
 
+$content = '';
 $smarty->assign('title', $smarty->fetch('tpl/title.tpl'));
 $smarty->assign('navbar', $output->getNavbar($smarty));
 
@@ -71,6 +70,23 @@ if(!empty($_GET)&& array_key_exists('page', $_GET)){
         case 'list alcoholic filters':
             $option ='';
             break;
+        case 'finder':
+            $decodeJson = $api->run($page, $data);
+            $content = $output->getSearchPage($smarty,$decodeJson['drinks']);
+            break;
+        case 'drinks':
+            foreach ($_POST['ingredients'] as $ingredients){
+                $decodeJson = $api->run($page, $ingredients);
+                foreach ($decodeJson['drinks'] as $key => $item){
+                    $drink = $api->run('drinkInfo', $item['idDrink']);
+                    $content .= $output->getDrinkSearchList($smarty,$drink);
+                }
+            }
+            break;
+        case 'cocktails':
+            $decodeJson = $api->run($page, $data);
+            $content = $output->contactPage($smarty);
+            break;
         case 'contact':
             $content = $output->contactPage($smarty);
             break;
@@ -89,7 +105,6 @@ if(!empty($_GET)&& array_key_exists('page', $_GET)){
 }
 
 $smarty->assign('footer', $smarty->fetch('tpl/footer.tpl'));
-
 
 $smarty->assign('content', $content);
 $smarty->display('tpl/main.tpl');

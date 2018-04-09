@@ -1,1 +1,1 @@
-<h1>Your Drinks</h1>
+<h1 class="title">Your drinks</h1>

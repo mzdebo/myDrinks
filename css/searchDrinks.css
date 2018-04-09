@@ -1,0 +1,92 @@
+.items{
+    display: inline;
+}
+
+.menu button{
+    float: left;
+    font-size: 350%;
+    width: 33.33333333%;
+    background-color: #6e6e6e;
+    color:#FFF;
+}
+
+.menu{
+
+}
+
+.title{
+    text-align: center;
+    font-size: 400%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    color: #6e6e6e;
+}
+
+.content{
+    font-size: 400%;
+    padding: 5%;
+}
+
+.title{
+    -webkit-animation-duration: 5s;
+    -webkit-animation-name: magic;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    animation-duration: infinite;
+    animation-duration: 10s;
+
+}
+
+@-webkit-keyframes magic {
+    0%   {color: #800000;}
+    5%   {color: #822828;}
+    10%  {color: #8d533b;}
+    15%  {color: #996675;}
+    20%  {color: #9966a9;}
+    25%  {color: #800080;}
+    30%  {color: #65009b;}
+    35%  {color: #4800e1;}
+    40%  {color: #0400d0;}
+    45%  {color: #0044dc;}
+    50%  {color: #0172e2;}
+    55%  {color: #019fe8;}
+    60%  {color: #0bafa2;}
+    65%  {color: #17b34d;}
+    70%  {color: #00d41c;}
+    75%  {color: #00ff00;}
+    80%  {color: #80ff00;}
+    85%  {color: #c8ff00;}
+    90%  {color: #ffff00;}
+    95%  {color: #ffdb00;}
+    100% {color: #ffb600;}
+
+}
+
+@keyframes magic {
+     0%   {color: #800000;}
+     5%   {color: #822828;}
+     10%  {color: #8d533b;}
+     15%  {color: #996675;}
+     20%  {color: #9966a9;}
+     25%  {color: #800080;}
+     30%  {color: #65009b;}
+     35%  {color: #4800e1;}
+     40%  {color: #0400d0;}
+     45%  {color: #0044dc;}
+     50%  {color: #0172e2;}
+     55%  {color: #019fe8;}
+     60%  {color: #0bafa2;}
+     65%  {color: #17b34d;}
+     70%  {color: #00d41c;}
+     75%  {color: #00ff00;}
+     80%  {color: #80ff00;}
+     85%  {color: #c8ff00;}
+     90%  {color: #ffff00;}
+     95%  {color: #ffdb00;}
+     100% {color: #ffb600;}
+
+ }

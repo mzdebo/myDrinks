@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2018-04-08 14:05:45
+  from "E:\XAMPP\htdocs\projects\myDrinks\tpl\navBar.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5aca05993e38d4_79006425',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'bed426b010f8c974d0bd62e5dee4c67643526e31' => 
+    array (
+      0 => 'E:\\XAMPP\\htdocs\\projects\\myDrinks\\tpl\\navBar.tpl',
+      1 => 1523188669,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5aca05993e38d4_79006425 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 
 <div>
     <ul class="navbar">
@@ -75,4 +99,5 @@
             </div>
         </form>
     </div>
-</div>
+</div><?php }
+}

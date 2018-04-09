@@ -9,7 +9,7 @@
 class Output {
 
 
-    private function randomDrink($decodeJson,$smarty){
+    private function allDrinkTemplate($decodeJson,$smarty){
 
         $smarty->assign('name' , $decodeJson['drinks'][0]['strDrink']);
         $smarty->assign('alcoholic' , $decodeJson['drinks'][0]['strAlcoholic']);
@@ -27,19 +27,22 @@ class Output {
 
 
 
-        return $smarty->fetch('../tpl/randomDrink.tpl');
+        return $smarty->fetch('../tpl/drinkInfo.tpl');
     }
 
 
+    public function getSearchPage($smarty, $decodeJson) {
+        $smarty->assign('ingredients', $decodeJson);
+        return $smarty->fetch('tpl/selectIngredients.tpl');
+    }
 
+    public function getDrinkSearchList($smarty,$decodeJson){
+        return $this->allDrinkTemplate($decodeJson,$smarty);
+    }
 
-    public function getHomePage($decodeJson,$smarty){
-        /*echo '<pre>';
-        print_r($decodeJson);
-        echo '</pre>';*/
-        $randomDrink = $this->randomDrink($decodeJson,$smarty);
+    public function getHomePage($decodeJson,$smarty) {
+        $randomDrink = $this->allDrinkTemplate($decodeJson,$smarty);
         $smarty->assign('random', $randomDrink);
-        //$smarty->assign('random',$decodeJson['drinks'][0]);
         return $smarty->fetch('tpl/index.tpl');
      }
 
